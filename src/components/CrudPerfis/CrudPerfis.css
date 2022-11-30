@@ -1,0 +1,13 @@
+.inclui-container {
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.lista {
+    margin: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #f2f2f2;
+}

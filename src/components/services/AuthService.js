@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5272/api/Home/login/";
+const API_URL = "http://localhost:5272/api/Home/";
 
 const login = (username, senha) => {
     return axios
-        .post(API_URL, {
+        .post(API_URL + 'login/', {
             username,
             senha,
         })

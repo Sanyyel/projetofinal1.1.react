@@ -3,6 +3,7 @@ import './CrudPerfis.css';
 import Main from '../template/Main';
 import axios from "axios";
 import {useEffect, useState } from "react";
+import UserService from "../services/UserService";
 
 const title = "Perfil dos Funcionários";
 

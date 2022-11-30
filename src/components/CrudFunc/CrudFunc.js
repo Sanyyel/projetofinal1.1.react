@@ -169,12 +169,12 @@ export default function CrudFunc(){
                             <td>{funcionario.funcMes}</td>
                             <td>
                                 <button onClick={() => carregar(funcionario)}>
-                                    Altera
+                                    Alterar
                                 </button>
                             </td>
                             <td>
                                 <button onClick={() => remover(funcionario)}>
-                                    Remove
+                                    Remover
                                 </button>
                             </td>
                         </tr>)}

@@ -21,6 +21,11 @@ const headerAuthorization = () =>{
         }
     }
 }
+
+const getBoardPatrao = async () =>{
+    return await axios.get(api_url + 'funcionario', headerAuthorization())
+}
+
 const getBoardFuncionarios = async () =>{
     return await axios.get(api_url + 'funcionario', headerAuthorization())
 }
@@ -35,6 +40,7 @@ const deletarFuncionario = async (id) =>{
 
 const UserService = {
     getPublicCarometro,
+    getBoardPatrao: getBoardPatrao,
     getBoardFuncionarios: getBoardFuncionarios,
     salvarFuncionario: salvarFuncionario,
     deletarFuncionario: deletarFuncionario
