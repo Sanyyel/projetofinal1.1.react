@@ -3,6 +3,8 @@ import './CrudFunc.css';
 import Main from '../template/Main';
 import axios, { spread } from "axios";
 import {useEffect, useState } from "react";
+
+import UserService from '../services/UserService';
 //import 'materialize/materialize.css'
 
 const title = "Cadastro de Funcionários";
@@ -29,15 +31,7 @@ export default function CrudFunc(){
     })
     //para o admin ver
 
-    const [data, setData] = useState([])
-    //para podermos manipular
-
-    const [dataAtual, setDataAtual] = useState(true)
-    //pra ser chamado em ocasiões
-
     const [listaFunc, setListaFunc] = useState([])
-
-    const [listaAgora, setListaAgora] = useState([])
 
     useEffect(() => {
         axios(urlFunc).then(resp =>{
@@ -78,13 +72,6 @@ export default function CrudFunc(){
                 ...funcionario,
                     [name] : value
             })
-    }
-    const atualizaCampo = (event) =>{
-        const funcatt = setFuncionario(funcionario);
-
-        funcatt[event.target.name] = event.target.value;
-
-        setFuncionario(funcionario);
     }
 
     const carregar = (funcionario) =>{
@@ -177,6 +164,7 @@ export default function CrudFunc(){
                         {listaFunc.map((funcionario) =>
                         <tr key={funcionario.id}>
                             <td>{funcionario.nome}</td>
+                            <td>{funcionario.setor}</td>
                             <td>{funcionario.metas}</td>
                             <td>{funcionario.funcMes}</td>
                             <td>

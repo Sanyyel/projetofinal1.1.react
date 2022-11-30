@@ -7,6 +7,7 @@ import CrudPerfis from "./components/CrudPerfis/CrudPerfis";
 import Login from "./components/Login/Login";
 import AuthService from "./components/services/AuthService";
 import Logout from "./components/Logout/Logout";
+import CrudCarometro from "./components/CrudCarometro/CrudCarometro";
 
 export default function Rotas(){
 
@@ -58,11 +59,7 @@ export default function Rotas(){
             )}
 
             <Route exact path="/carometro"
-                element={
-                    <Main title="Carômetro">
-                        <div>Carômetro...</div>
-                    </Main>
-                } 
+                element={<CrudCarometro/>} 
             />
 
             <Route path='/login' element={<Login/>}/>
